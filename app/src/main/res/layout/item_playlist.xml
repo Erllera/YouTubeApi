@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/thumbnailPlaylist"
+        android:layout_width="192dp"
+        android:layout_height="108dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/thumbnail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="TODO" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="192dp"
+        android:layout_height="25dp"
+        android:background="@color/blacked"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnailPlaylist"
+        app:layout_constraintEnd_toEndOf="@id/thumbnailPlaylist"
+        app:layout_constraintStart_toStartOf="@id/thumbnailPlaylist" />
+
+    <TextView
+        android:id="@+id/playlistKind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Плейлист"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/view"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnailPlaylist"
+        app:layout_constraintEnd_toEndOf="@id/thumbnailPlaylist"
+        app:layout_constraintStart_toStartOf="@id/thumbnailPlaylist" />
+
+    <TextView
+        android:id="@+id/playlistName"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Ulukmanapo - Летали"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/playlistSize"
+        app:layout_constraintStart_toEndOf="@id/thumbnailPlaylist"
+        app:layout_constraintTop_toTopOf="@id/thumbnailPlaylist" />
+
+    <TextView
+        android:id="@+id/playlistSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="32 видео"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/thumbnailPlaylist"
+        app:layout_constraintStart_toStartOf="@id/playlistName"
+        app:layout_constraintTop_toBottomOf="@id/playlistName" />
+</androidx.constraintlayout.widget.ConstraintLayout>
